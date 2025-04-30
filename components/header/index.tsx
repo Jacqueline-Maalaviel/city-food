@@ -20,14 +20,14 @@ export default function Header() {
     <>
       <Drawer.Root placement={isMobile ? "end" : "top"}>
         <Drawer.Trigger asChild>
-          <Icon position={"absolute"} top={4} right={6} size="xl" color={"black"}>
+          <Icon position={"absolute"} top={6} right={6} size="xl" color={"black"}>
             <AiOutlineMenu />
           </Icon>
         </Drawer.Trigger>
         <Portal>
           <Drawer.Backdrop />
           <Drawer.Positioner>
-            <Drawer.Content bg={'saddlebrown'} colorPalette={"gray"} p={4}>
+            <Drawer.Content bg={'seashell'} colorPalette={"gray"} p={4}>
               <Drawer.Body alignSelf={"center"}>
                 <Image
                   position="absolute"

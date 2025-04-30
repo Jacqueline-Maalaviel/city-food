@@ -1,5 +1,5 @@
 'use client';
-import { Text, Stack, HStack, Flex } from "@chakra-ui/react";
+import { Text, Stack, Flex } from "@chakra-ui/react";
 import ExploreMeals from "./explore-meals";
 import Category from "./meal-category";
 
@@ -10,39 +10,8 @@ const Home = () => {
       justifyContent="space-between"
       alignItems="center"
       mb={4}
-      pt={4}
     >
-      <Stack mt={10} w="full">
-        <HStack 
-          align="center" 
-          justify="center" 
-          mb={4} 
-          flexWrap="wrap" 
-          bg={'seashell'} 
-          color={'blackAlpha.900'} 
-          p={2}  
-          boxShadow="sm"
-        >
-          <Text
-            fontSize={["3xl", "4xl", "5xl"]} 
-            fontWeight="bold"
-            letterSpacing="tight"
-            fontStyle="italic"
-            textAlign="center"
-          >
-            Welcome,
-          </Text>
-          <Text
-            fontSize={["lg", "xl", "2xl"]}
-            mt={[3, 3, 5]}
-            fontWeight="bold"
-            letterSpacing="tight"
-            textAlign="center"
-            
-          >
-            Explore Our Meals
-          </Text>
-        </HStack>
+      <Stack mt={4} w="full">
         <ExploreMeals />
         <Text
           fontSize={"5xl"}

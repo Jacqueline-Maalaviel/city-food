@@ -36,12 +36,10 @@ const Category = () => {
   useEffect(() => {
     fetchCategory();
   }, []);
-
-  const maxWidth = isSmallScreen
-    ? "88vw"
-    : isMobile
-    ? "94vw"
-    : "95vw";
+  
+  const maxWidth = isMobile && isSmallScreen
+    ? "100vw"
+    : "98.9vw";
 
   return (
     <Box

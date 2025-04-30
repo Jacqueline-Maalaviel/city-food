@@ -23,6 +23,7 @@ const ExploreMeals = () => {
     <Grid
       templateColumns={["1fr", "repeat(2, 1fr)", "repeat(2, 1fr)", "repeat(2, 1fr)", "repeat(4, 1fr)"]} 
       gap={4}
+      padding={6}
     >
       {meals.map((meal) => (
         <Card.Root maxW="xs" overflow="hidden" key={meal.idMeal} m="auto" p={1}>
