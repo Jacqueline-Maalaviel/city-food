@@ -17,7 +17,7 @@ export default function Home() {
         >
           <Image
             position="absolute"
-            top={5}
+            top={3}
             left={6}
             src="/download.png"
             boxSize="40px"

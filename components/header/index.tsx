@@ -20,7 +20,7 @@ export default function Header() {
     <>
       <Drawer.Root placement={isMobile ? "end" : "top"}>
         <Drawer.Trigger asChild>
-          <Icon position={"absolute"} top={6} right={6} size="xl" color={"black"}>
+          <Icon position={"absolute"} top={4} right={6} size="xl" color={"black"}>
             <AiOutlineMenu />
           </Icon>
         </Drawer.Trigger>

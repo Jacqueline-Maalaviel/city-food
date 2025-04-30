@@ -24,7 +24,6 @@ const scroll = keyframes`
 
 const Category = () => {
   const [isMobile] = useMediaQuery(["(max-width: 768px)"]);
-  const [isSmallScreen] = useMediaQuery(["(max-width: 425px)"]);
   const [category, setCategory] = useState<Category[]>([]);
 
   const fetchCategory = async () => {
@@ -37,7 +36,7 @@ const Category = () => {
     fetchCategory();
   }, []);
   
-  const maxWidth = isMobile && isSmallScreen
+  const maxWidth = isMobile 
     ? "100vw"
     : "98.9vw";
 
