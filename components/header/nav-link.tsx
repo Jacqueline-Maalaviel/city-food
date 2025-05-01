@@ -14,7 +14,7 @@ export default function NavLink({ href, label, isActive }: NavLinkProps) {
         m={2}
         _hover={{ bg: "gray.950", color: "white" }}
         bg={isActive ? "gray.950" : "transparent"}
-        color={isActive ? "white" : "black"}
+        color={isActive ? "yellow.500" : "black"}
         borderRadius="full"
         fontWeight={"bold"}
       >
