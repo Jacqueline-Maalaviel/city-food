@@ -19,7 +19,8 @@ const Home = () => {
           fontWeight="bold"
           letterSpacing="tight"
           textAlign="center"
-          fontStyle={'italic'} color={'blackAlpha.900'}
+          fontStyle={'italic'} 
+          color={'yellow.subtle'}
           bg={'seashell'}
         >
           Explore Category

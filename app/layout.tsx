@@ -1,17 +1,23 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Josefin_Sans } from "next/font/google";
 import "./globals.css";
 import { Provider } from "@/components/ui/provider"
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const josefinSans = Josefin_Sans({
+  subsets: ['latin'],
+  weight: ['100', '200', '300', '400', '500', '600', '700'], 
+  style: ['normal', 'italic'], 
+  variable: '--font-josefin-sans',
+  display: 'swap',
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+// const roboto = Roboto({
+//   variable: '--font-roboto',
+//   subsets: ['latin'],
+//   weight: ['100', '300', '400', '500', '700', '900'], 
+//   display: 'swap',
+//   style: ['normal', 'italic'],
+// });
 
 export const metadata: Metadata = {
   title: "City Food App",
@@ -25,7 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${josefinSans.className} bg-gray-300`}>
       <Provider>{children}</Provider>
       </body>
     </html>
