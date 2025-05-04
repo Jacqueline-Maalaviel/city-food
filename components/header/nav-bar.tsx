@@ -13,7 +13,8 @@ export default function NavBar() {
     { href: "/menu", label: "Menu" },
     { href: "/my-favourites", label: "My Favourites" },
     { href: "/meal-generator", label: "Meal Generator" },
-    { href: "/about-me", label: "About Me" },
+    { href: "/about-us", label: "About us" },
+    { href: "/my-cart", label: "My Cart" }
   ];
 
   return (
