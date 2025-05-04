@@ -12,6 +12,9 @@ export default function Header() {
       color={'blackAlpha.900'} 
       p={2}  
       boxShadow="sm"
+      position={"sticky"}
+      top={0}
+      zIndex={10}
     >
       <Image
         position="absolute"
