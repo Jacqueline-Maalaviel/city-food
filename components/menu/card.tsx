@@ -1,51 +1,15 @@
 'use client'
-import { Button, Card, Flex, Grid, Stack, Text, Image, Icon, Input, InputGroup } from "@chakra-ui/react";
-import { useState, useEffect } from "react";
+import { Button, Card, Flex, Grid, Stack, Text, Image, Icon, Input, InputGroup, NativeSelect } from "@chakra-ui/react";
 import { LiaHeart } from "react-icons/lia";
 import { LuSearch } from "react-icons/lu";
 import { FaArrowUp } from "react-icons/fa";
 
-interface ExploreMealsProps {
-  meals: { idMeal: string; [key: string]: string; }[];
+interface MenuCardProps {
+  meals: { idMeal: string; strMeal: string; strCategory: string; strArea: string; strMealThumb: string; }[];
+  showScrollButton: boolean;
+  scrollToTop: () => void;
 }
-
-export default function MenuCard() {
-  const [meals, setMeals] = useState<ExploreMealsProps["meals"]>([]);
-  const [showScrollButton, setShowScrollButton] = useState(false);
-
-  const fetchMeals = async () => {
-    const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
-    const allMeals: ExploreMealsProps["meals"] = [];
-  
-    for (const letter of alphabet) {
-      const response = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?f=${letter}`);
-      const data = await response.json();
-      if (data.meals) {
-        allMeals.push(...data.meals.slice(0, 5));
-      }
-    }
-  
-    setMeals(allMeals);
-  };
-
-  const handleScroll = () => {
-    if (window.scrollY > 300) {
-      setShowScrollButton(true);
-    } else {
-      setShowScrollButton(false);
-    }
-  };
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
-  useEffect(() => {
-    fetchMeals();
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
+const MenuCard: React.FC<MenuCardProps> = ({ meals, showScrollButton, scrollToTop }) => {
   return (
     <>
       <Flex
@@ -55,13 +19,23 @@ export default function MenuCard() {
         mb={4}
       >
         <Stack mt={4} w="full">
-          <Flex justifyContent="center" alignItems="center" mt={4}>
-            <InputGroup endElement={<LuSearch />} maxWidth={"300px"} fontSize="lg">
+          <Flex justifyContent="space-between" mx={6} alignItems="center" mt={4}>
+            <NativeSelect.Root size="sm" maxWidth="250px" variant={'subtle'}>
+              <NativeSelect.Field placeholder="Select category" color="white"  borderRadius={"3xl"}>
+                {meals.map((meal) => (
+                  <option key={meal.idMeal} value={meal.strCategory}>
+                    {meal.strCategory}
+                  </option>
+                ))}
+              </NativeSelect.Field>
+              <NativeSelect.Indicator />
+            </NativeSelect.Root>
+            <InputGroup endElement={<LuSearch />} maxWidth={"250px"} fontSize="lg">
               <Input
                 placeholder="Search food..."
                 variant={"subtle"}
                 color="white"
-                bg={"blackAlpha.900"}
+                size={'sm'}
                 borderRadius={"3xl"}
               />
             </InputGroup>
@@ -129,3 +103,4 @@ export default function MenuCard() {
     </>
   );
 }
+export default MenuCard;
