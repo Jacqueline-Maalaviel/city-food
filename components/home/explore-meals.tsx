@@ -13,7 +13,7 @@ const ExploreMeals = () => {
   const fetchMeals = async () => {
     const response = await fetch("https://www.themealdb.com/api/json/v1/1/search.php?f=p");
     const data = await response.json();
-    setMeals(data.meals.slice(0, 12));
+    setMeals(data.meals.slice(0, 15));
   };
 
   useEffect(() => {
