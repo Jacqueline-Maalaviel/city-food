@@ -11,10 +11,9 @@ export default function NavBar() {
   const navItems = [
     { href: "/", label: "Home" },
     { href: "/menu", label: "Menu" },
-    { href: "/my-favourites", label: "My Favourites" },
+    { href: "/favourites", label: "My Favourites" },
     { href: "/meal-generator", label: "Meal Generator" },
-    { href: "/about-us", label: "About us" },
-    { href: "/my-cart", label: "My Cart" }
+    { href: "/cart", label: "My Cart" }
   ];
 
   return (

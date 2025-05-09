@@ -3,7 +3,7 @@ import { HStack, Skeleton } from "@chakra-ui/react";
 import MenuCard from "./card";
 import { useState, useEffect } from "react";
 
-interface ExploreMealsProps {
+ export interface ExploreMealsProps {
   meals: { 
     idMeal: string; 
     strMeal: string; 
