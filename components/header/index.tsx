@@ -32,7 +32,7 @@ export default function Header() {
         letterSpacing="tight"
         fontStyle="italic"
         textAlign="center" 
-        color={'gray.900'}
+        color={'#4B2E19'}
       >
         City Food
       </Text>
