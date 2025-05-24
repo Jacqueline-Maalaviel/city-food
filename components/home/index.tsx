@@ -20,7 +20,7 @@ const Home = () => {
           letterSpacing="tight"
           textAlign="center"
           fontStyle={'italic'} 
-          color={'yellow.subtle'}
+          color={'#4B2E19'}
           bg={'seashell'}
         >
           Explore Category
