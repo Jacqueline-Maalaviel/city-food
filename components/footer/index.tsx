@@ -25,7 +25,7 @@ export function SocialLinks() {
           <IconButton
             aria-label={label}
             variant="ghost"
-            color={'yellow.subtle'}
+            color={'#4B2E19'}
             _hover={{ color: "white" }}
           >
             {icon}
@@ -49,7 +49,7 @@ export default function Footer() {
       <Flex direction={{ base: "column", md: "row" }} justify="space-between" align="center">
         <Stack>
           <SocialLinks />
-          <Text fontWeight="semibold" pl={7} fontSize={'xs'} color={'yellow.subtle'}>Locate Us: Ashongman Estate</Text>
+          <Text fontWeight="semibold" pl={7} fontSize={'xs'} color={'#4B2E19'}>Locate Us: Ashongman Estate</Text>
         </Stack>
         <Text mt={{ base: 8, md: 11 }} fontSize="xs" fontStyle={'italic'} color={'grey'}>
           © {currentYear} City Food. All rights reserved.
